@@ -15,8 +15,8 @@ export class MovieDetailComponent implements OnInit {
   movieId: number = 0;
 
   constructor(private movieSvc: MovieService,
-              private router: Router,
-              private route: ActivatedRoute) { }
+    private router: Router,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     //get id from the router
@@ -24,9 +24,19 @@ export class MovieDetailComponent implements OnInit {
     //get movie for that movieId
     this.movieSvc.get(this.movieId).subscribe(
       jr => {
-              this.movie = jr.data as Movie;
-            console.log("Movie found!", this.movie);
-          });
+        this.movie = jr.data as Movie;
+        console.log("Movie found!", this.movie);
+      });
   }
-  delete(){}
+  delete() {
+    this.movieSvc.delete(this.movieId).subscribe(jr => {
+      if (jr.errors == null) {
+        console.log(jr.data);
+        this.router.navigateByUrl("/movie/list");
+      }
+      else {
+        console.log("*****Error deleting movie.", this.movieId, jr.errors);
+      }
+    });
+  }
 }
