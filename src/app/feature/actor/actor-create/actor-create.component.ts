@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./actor-create.component.css']
 })
 export class ActorCreateComponent implements OnInit {
-
+  title: string = "Actor-Create";
+  submitBtnTitle: string ="Create";
+  
   constructor() { }
 
   ngOnInit(): void {
