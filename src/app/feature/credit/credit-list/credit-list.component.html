@@ -12,9 +12,10 @@
     <tbody>
         <tr *ngFor="let credit of credits">
             <td>{{credit.id}}</td>
-            <td>{{credit.actor.}}</td>
-            <td>{{movie.rating}}</td>
-            <td>{credit.role}}</td>
+            <td>{{credit.actor.lastName}}</td>
+            <td>{{credit.actor.firstName}}</td>
+            <td>{{credit.movie.title}}</td>
+            <td>{{credit.role}}</td>
         </tr>
         
 
