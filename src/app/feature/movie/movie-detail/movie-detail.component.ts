@@ -28,5 +28,5 @@ export class MovieDetailComponent implements OnInit {
             console.log("Movie found!", this.movie);
           });
   }
-
+  delete(){}
 }

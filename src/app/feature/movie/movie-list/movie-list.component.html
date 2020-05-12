@@ -1,5 +1,9 @@
-<span class = "component-title">{{title}}</span>
-<span>+</span>
+<section  class="heading">
+    <span class="page-title font-weight-bold font-italic">{{title}}</span>
+     <a routerLink="/movie/create"></a>
+        <img width='20' height='20' src='assets/add-icon.png' title="Add New">
+    
+</section>
 <table *ngIf="movies" class = "table table-sm table-striped">
     <thead>
         <tr>

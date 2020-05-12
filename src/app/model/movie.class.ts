@@ -1,7 +1,7 @@
 export class Movie {
     id: number;
     title: string;
-    ratinig: string;
+    rating: string;
     year: number
     director: string;
 
@@ -11,7 +11,7 @@ export class Movie {
     }
     about(): string {
         return `Movie Details: id =${this.id}, title=${this.title}, 
-        rating=${this.ratinig}, year=${this.year}, director=${this.director}.`;
+        rating=${this.rating}, year=${this.year}, director=${this.director}.`;
     }
 
 
