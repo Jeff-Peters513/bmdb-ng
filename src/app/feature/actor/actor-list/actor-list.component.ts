@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActorService } from 'src/app/service/actor.service';
+import { Actor } from 'src/app/model/actor.class';
 
 @Component({
   selector: 'app-actor-list',
@@ -16,7 +18,11 @@ export class ActorListComponent implements OnInit {
 
   ngOnInit(): void {
     //call our actor service to populate the list of actors
-    
+    this.actorSvc.list().subscribe(
+      jr => {
+        this.actors = jr.data as Actor[];
+        console.log("List of Actors", this.actors);
+      }
+    );
   }
-
 }
