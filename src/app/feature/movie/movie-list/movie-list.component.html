@@ -18,7 +18,10 @@
             <!-- <td>{{movie.rating}}</td> -->
             <td>{{movie.year}}</td>
             <!-- <td>{{movie.director}}</td> -->
-            <td>D | E</td>
+            <td>
+                <a routerLink='/movie/detail/{{movie.id}}'>D</a> | 
+                <a routerLink='/movie/edit/{{movie.id}}'>E</a>
+            </td>
         </tr>
         
 

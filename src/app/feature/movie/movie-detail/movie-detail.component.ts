@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from 'src/app/model/movie.class';
+import { MovieService } from 'src/app/service/movie.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-movie-detail',
@@ -6,10 +9,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movie-detail.component.css']
 })
 export class MovieDetailComponent implements OnInit {
+  //displays all info about movie
+  title: string = "Movie-Detail";
+  movie: Movie = new Movie();
+  movieId: number = 0;
 
-  constructor() { }
+  constructor(private movieSvc: MovieService,
+              private router: Router,
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    //get id from the router
+    this.route.params.subscribe(parms => this.movieId = parms['id']);
+    //get movie for that movieId
+    this.movieSvc.get(this.movieId).subscribe(
+      jr => {
+              this.movie = jr.data as Movie;
+            console.log("Movie found!", this.movie);
+          });
   }
 
 }

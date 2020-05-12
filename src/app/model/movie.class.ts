@@ -9,5 +9,10 @@ export class Movie {
      year: number = 0, director: string = "") {
 
     }
+    about(): string {
+        return `Movie Details: id =${this.id}, title=${this.title}, 
+        rating=${this.ratinig}, year=${this.year}, director=${this.director}.`;
+    }
+
 
 }
