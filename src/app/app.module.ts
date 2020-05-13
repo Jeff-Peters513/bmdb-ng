@@ -18,6 +18,7 @@ import { ActorEditComponent } from './feature/actor/actor-edit/actor-edit.compon
 import { CreditCreateComponent } from './feature/credit/credit-create/credit-create.component';
 import { CreditDetailComponent } from './feature/credit/credit-detail/credit-detail.component';
 import { CreditEditComponent } from './feature/credit/credit-edit/credit-edit.component';
+import { MenuComponent } from './core/menu/menu.component';
 
 
 
@@ -35,7 +36,8 @@ import { CreditEditComponent } from './feature/credit/credit-edit/credit-edit.co
     ActorEditComponent,
     CreditCreateComponent,
     CreditDetailComponent,
-    CreditEditComponent
+    CreditEditComponent,
+    MenuComponent
     
   ],
   imports: [
