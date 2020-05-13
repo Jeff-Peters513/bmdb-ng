@@ -28,7 +28,7 @@ const routes: Routes = [
   {path: 'credit/list', component: CreditListComponent}, 
   {path: 'credit/create', component: CreditCreateComponent}, 
   {path: 'credit/detail/:id', component: CreditDetailComponent}, 
-  {path: 'credt/edit/:id', component: CreditEditComponent},
+  {path: 'credit/edit/:id', component: CreditEditComponent},
   {path: '**', component: CreditListComponent} 
 ];
 
