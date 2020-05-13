@@ -15,6 +15,9 @@ import { MovieEditComponent } from './feature/movie/movie-edit/movie-edit.compon
 import { ActorDetailComponent } from './feature/actor/actor-detail/actor-detail.component';
 import { ActorCreateComponent } from './feature/actor/actor-create/actor-create.component';
 import { ActorEditComponent } from './feature/actor/actor-edit/actor-edit.component';
+import { CreditCreateComponent } from './feature/credit/credit-create/credit-create.component';
+import { CreditDetailComponent } from './feature/credit/credit-detail/credit-detail.component';
+import { CreditEditComponent } from './feature/credit/credit-edit/credit-edit.component';
 
 
 
@@ -29,7 +32,10 @@ import { ActorEditComponent } from './feature/actor/actor-edit/actor-edit.compon
     MovieEditComponent,
     ActorDetailComponent,
     ActorCreateComponent,
-    ActorEditComponent
+    ActorEditComponent,
+    CreditCreateComponent,
+    CreditDetailComponent,
+    CreditEditComponent
     
   ],
   imports: [
