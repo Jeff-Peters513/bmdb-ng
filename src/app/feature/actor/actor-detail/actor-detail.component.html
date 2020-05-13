@@ -31,4 +31,29 @@
         <span><a routerLink="/actor/edit/{{actor.id}}" class="btn btn-sm btn-warning">Edit</a></span>
         <span> | <button (click)="delete()" class="btn btn-sm btn-danger">Delete</button></span>
     </span>
+    <table class="table table-sm">
+               <tr>
+                <td>{{credit.movie.title}}</td>
+                <td>{{credit.role}}</td>
+              </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td><input [(ngModel)]="actor.lastName" class="rounded" type="text" disabled></td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td><input [(ngModel)]="actor.gender" class="rounded" type="text" disabled></td>
+        </tr>
+        <tr>
+            <td>Birthday:</td>
+            <td><input [(ngModel)]="actor.birthday" class="rounded" type="text" disabled></td>
+        </tr>
+        
+    </table>
+
+
+
+
+
+
 </div>

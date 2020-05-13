@@ -1,10 +1,3 @@
-<!-- <section  class="heading">
-    <span class="page-title font-weight-bold font-italic">{{title}}</span>
-     <a routerLink="/credit/create">
-        <img width='20' height='20' src='assets/add-icon.png' title="Add New">
-    </a>
-           
-</section> -->
 <div *ngIf="credit" class="component">
     <section class="heading">
         <span class="page-title font-weight-bold font-italic">{{title}}</span>
@@ -18,11 +11,11 @@
             </tr>
             <tr>
                 <td>Actor:</td>
-                <td><input [(ngModel)]="credit.actor.lastName" class="rounded" type="text"></td>
+                <td *ngIf="credit.actor"><input [(ngModel)]="credit.actor.lastName" class="rounded" type="text"></td>
             </tr>
             <tr>
                 <td>Movie:</td>
-                <td><input [(ngModel)]="credit.movie.title" class="rounded" type="text"></td>
+                <td *ngIf="credit.movie"><input [(ngModel)]="credit.movie.title" class="rounded" type="text"></td>
             </tr>
             <tr>
                 <td>Role:</td>

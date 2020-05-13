@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Movie } from 'src/app/model/movie.class';
 import { MovieService } from 'src/app/service/movie.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { CreditService } from 'src/app/service/credit.service';
+import { Credit } from 'src/app/model/credit.class';
 
 @Component({
   selector: 'app-movie-detail',
@@ -13,10 +15,12 @@ export class MovieDetailComponent implements OnInit {
   title: string = "Movie-Detail";
   movie: Movie = new Movie();
   movieId: number = 0;
+  credits: Credit[]=[];
 
   constructor(private movieSvc: MovieService,
     private router: Router,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private creditSvc: CreditService) { }
 
   ngOnInit(): void {
     //get id from the router
@@ -27,6 +31,12 @@ export class MovieDetailComponent implements OnInit {
         this.movie = jr.data as Movie;
         console.log("Movie found!", this.movie);
       });
+      // get the credits for this movie
+
+
+
+
+
   }
   delete() {
     this.movieSvc.delete(this.movieId).subscribe(jr => {

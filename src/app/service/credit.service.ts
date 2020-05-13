@@ -28,4 +28,15 @@ export class CreditService {
   delete(id:number): Observable<JsonResponse> {
     return this.http.delete(url+id) as Observable<JsonResponse>;
   }
+  //2 new methods to sort by movieId and ActorId
+  getByMovie(id:number): Observable<JsonResponse> {
+    return this.http.get(url+"by-movie-id/"+id) as Observable<JsonResponse>;
+  }
+  getByActor(id:number): Observable<JsonResponse> {
+      return this.http.get(url+"by-actor-id/"+id) as Observable<JsonResponse>;
+  }
+
+
+
+
 }
