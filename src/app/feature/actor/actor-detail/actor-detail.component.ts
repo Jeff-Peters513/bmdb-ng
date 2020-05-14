@@ -31,9 +31,9 @@ export class ActorDetailComponent implements OnInit {
         this.actor = jr.data as Actor;
         console.log("Actor found!", this.actor);
     });
-    this.creditSvc.getByActor(this.actorId).subscribe(
+    this.creditSvc.getAllMoviesForActor(this.actorId).subscribe(
       jr => {
-        this.credit = jr.data as Credit;
+        this.credit[this.actorId]= jr.data as Credit;
         console.log("Movies by actorID found!", this.credit);
     });
       

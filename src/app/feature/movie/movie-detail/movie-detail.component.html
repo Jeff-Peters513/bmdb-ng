@@ -32,23 +32,19 @@
         <span> | <button (click)="delete()" class="btn btn-sm btn-danger">Delete</button></span>
     </span>
     <!-- display actor credits associated with the chosen movie -->
-    <table *ngIf="movies" class = "table table-sm table-striped">
+    <h3>Credits</h3>
+    <table class = "table table-sm table-striped">
         <thead>
             <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <!-- <th>Rating</th> -->
-                <th>Year</th>
-                <!-- <th>Director</th> -->
-                <th>Action</th>
+                <th>Role</th>
+                <th>Actor</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let movie of movies">
-                <td>{{movie.id}}</td>
-                <td>{{movie.title}}</td>
-                <!-- <td>{{movie.rating}}</td> -->
-                <td>{{movie.year}}</td>
-                <!-- <td>{{movie.director}}</td> -->
-                <td>
+            <tr *ngFor="let credit of credits">
+                <td><input [(ngModel)]= "credit.role" class="rounded" type="test" disabled>"</td>
+                <td><input [(ngModel)]= "credit.actor.lastName + ', '+credit.actor.firstName" class="rounded" type="test" disabled>"</td>
+            </tr>
+        </tbody>
+    </table>
 </div>

@@ -15,7 +15,7 @@ export class MovieDetailComponent implements OnInit {
   title: string = "Movie-Detail";
   movie: Movie = new Movie();
   movieId: number = 0;
-  credits: Credit[]=[];
+  credits: Credit[] = [];
 
   constructor(private movieSvc: MovieService,
     private router: Router,
@@ -31,13 +31,13 @@ export class MovieDetailComponent implements OnInit {
         this.movie = jr.data as Movie;
         console.log("Movie found!", this.movie);
       });
-      // get the credits for this movie
-
-
-
-
-
+    // get the credits for this movie
+    this.creditSvc.getAllActorsForMovie(this.movieId).subscribe(jr => {
+      this.credits = jr.data as Credit[];
+    });
   }
+
+
   delete() {
     this.movieSvc.delete(this.movieId).subscribe(jr => {
       if (jr.errors == null) {
