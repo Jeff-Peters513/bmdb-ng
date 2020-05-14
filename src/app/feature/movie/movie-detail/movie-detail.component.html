@@ -42,8 +42,8 @@
         </thead>
         <tbody>
             <tr *ngFor="let credit of credits">
-                <td><input [(ngModel)]= "credit.role" class="rounded" type="test" disabled>"</td>
-                <td><input [(ngModel)]= "credit.actor.lastName + ', '+credit.actor.firstName" class="rounded" type="test" disabled>"</td>
+                <td><input [(ngModel)]= "credit.role" class="rounded" type="test" disabled></td>
+                <td><input [(ngModel)]= "credit.actor.lastName + ', '+ credit.actor.firstName" class="rounded" type="test" disabled></td>
             </tr>
         </tbody>
     </table>

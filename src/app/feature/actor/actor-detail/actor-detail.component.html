@@ -31,24 +31,20 @@
         <span><a routerLink="/actor/edit/{{actor.id}}" class="btn btn-sm btn-warning">Edit</a></span>
         <span> | <button (click)="delete()" class="btn btn-sm btn-danger">Delete</button></span>
     </span>
-    <table class="table table-sm">
-               <tr>
-                <td>{{credit.movie.title}}</td>
-                <td>{{credit.role}}</td>
-              </tr>
-        <tr>
-            <td>Last Name:</td>
-            <td><input [(ngModel)]="actor.lastName" class="rounded" type="text" disabled></td>
-        </tr>
-        <tr>
-            <td>Gender:</td>
-            <td><input [(ngModel)]="actor.gender" class="rounded" type="text" disabled></td>
-        </tr>
-        <tr>
-            <td>Birthday:</td>
-            <td><input [(ngModel)]="actor.birthday" class="rounded" type="text" disabled></td>
-        </tr>
-        
+    <h3>Movies</h3>
+        <table class = "table table-sm table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let credit of credits">
+                <td><input [(ngModel)]= "credit.movie.title" class="rounded" type="test" disabled></td>
+                <td><input [(ngModel)]= "credit.role" class="rounded" type="test" disabled></td>
+            </tr>
+        </tbody>
     </table>
 
 

@@ -31,7 +31,7 @@ export class MovieDetailComponent implements OnInit {
         this.movie = jr.data as Movie;
         console.log("Movie found!", this.movie);
       });
-    // get the credits for this movie
+    // get the actor credits for this movie
     this.creditSvc.getAllActorsForMovie(this.movieId).subscribe(jr => {
       this.credits = jr.data as Credit[];
     });

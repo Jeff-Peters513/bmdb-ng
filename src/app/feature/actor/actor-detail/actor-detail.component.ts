@@ -15,7 +15,7 @@ export class ActorDetailComponent implements OnInit {
   title: string = "Actor-Detail";
   actor: Actor = new Actor();
   actorId: number = 0;
-  credit: Credit [] = [];
+  credits: Credit [] = [];
 
   constructor(private actorSvc: ActorService,
               private router: Router,
@@ -33,8 +33,8 @@ export class ActorDetailComponent implements OnInit {
     });
     this.creditSvc.getAllMoviesForActor(this.actorId).subscribe(
       jr => {
-        this.credit[this.actorId]= jr.data as Credit;
-        console.log("Movies by actorID found!", this.credit);
+        this.credits= jr.data as Credit[];
+        console.log("Movies by actorID found!", this.credits);
     });
       
 
