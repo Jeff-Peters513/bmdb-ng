@@ -20,6 +20,8 @@ import { CreditDetailComponent } from './feature/credit/credit-detail/credit-det
 import { CreditEditComponent } from './feature/credit/credit-edit/credit-edit.component';
 import { MenuComponent } from './core/menu/menu.component';
 import { UserLoginComponent } from './feature/user-login/user-login.component';
+import { SortPipe } from './pipe/sort.pipe';
+import { BaseComponent } from './feature/base/base.component';
 
 
 
@@ -39,7 +41,9 @@ import { UserLoginComponent } from './feature/user-login/user-login.component';
     CreditDetailComponent,
     CreditEditComponent,
     MenuComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    SortPipe,
+    BaseComponent
     
   ],
   imports: [

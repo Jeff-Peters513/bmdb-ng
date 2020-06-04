@@ -14,8 +14,6 @@ export class MovieCreateComponent implements OnInit {
 
   movie: Movie = new Movie();
 
-
-
   constructor(private movieSvc: MovieService,
     private router: Router) {
 
